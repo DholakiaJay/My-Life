@@ -1,0 +1,487 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sidebar {
+  height: 100%;
+  width: 21%;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #282828;
+}
+.sidebar .profile {
+  height: 33%;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid grey;
+  padding: 0.5rem;
+}
+.sidebar .profile .avtar {
+  height: 63%;
+  width: 72%;
+
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+.sidebar .profile .avtar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.sidebar .profile .name {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.sidebar .profile .status {
+  width: 100%;
+  color: white;
+  opacity: 0.6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+}
+.sidebar .contact-info {
+  height: 40%;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  color: white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.sidebar .contact-info ul {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+}
+.sidebar .contact-info ul li {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.sidebar .contact-info ul li .icon {
+  color: #ffb606;
+}
+.sidebar .contact-info ul li .title {
+  opacity: 0.6;
+}
+.sidebar .contact-info ul li .info {
+  font-weight: bold;
+}
+.sidebar .language {
+  height: 35%;
+  width: 100%;
+  color: white;
+  border-bottom: 1px solid grey;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.language ul {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 0.1rem;
+  padding: 0.3rem;
+}
+.language ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+}
+.language ul li:hover {
+  transition: all 300ms;
+  color: #ffb606;
+}
+
+.language ul li img {
+  height: 31px;
+  width: 31px;
+}
+
+.main {
+  height: 100%;
+  width: 71%;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+}
+.main .navbar {
+  align-self: end;
+  width: 50%;
+}
+.main .navbar ul {
+  width: 100%;
+  background-color: #493f3f;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  padding: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  justify-content: space-around;
+}
+.main .navbar ul li {
+  list-style-type: none;
+}
+
+/* Work */
+.work-container {
+  padding: 0.5rem;
+  margin: 0px auto;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  
+  border-radius: 1rem;
+}
+.work-card {
+  height: 45%;
+  width: 45%;
+  background-color: transparent;
+  border-radius: 1rem;
+  transition: all 600ms;
+  perspective: 1500px;
+}
+.box,
+.box-2,
+.box-3 {
+  
+  height: 90%;
+  width: 90%;
+  position: relative;
+  background-color: black;
+  transition: all 600ms;
+  border-radius: 1rem;
+  transform-style: preserve-3d;
+  
+}
+.c-post,
+.c-dec,
+.c-exp {
+  text-align: center;
+  padding: 0.3rem;
+  font-size: medium;
+}
+.c-post,
+.c-exp {
+  color: black;
+  font-size: medium;
+  font-weight: 600;
+}
+.work-card .box .box-1,
+.work-card .box-2 .box-1a,
+.work-card .box-3 .box-1th {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color :rgb(244, 239, 246);
+  backdrop-filter: blur(30px);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  box-shadow:black 0px 13px 27px -5px,silver 0px 8px 16px -8px;
+}
+
+
+.work-card .box .box-1 img,
+.work-card .box-2 .box-1a img,
+.work-card .box-3 .box-1th img {
+  height: 45%;
+  width: 65%;
+  object-fit: contain;
+}
+.work-card .box-3 .box-1th img {
+  mix-blend-mode: darken;
+}
+.work-card .box .box-2,
+.work-card .box-2 .box-2a,
+.work-card .box-3 .box-2th {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #a7c2e5;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  border-radius: 1rem;
+}
+.c-name {
+  margin-top: 0.5rem;
+  font-size: medium;
+  font-weight: 900;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: larger;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.btn:hover {
+  opacity: 1;
+  color:orangered;
+}
+#backbtn,
+#t-backbtn,
+#th-backbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#backbtn,
+#t-backbtn,
+#th-backbtn:hover {
+  
+ 
+  color:orangered;
+}
+#more:checked + .box {
+  transform: rotateY(180deg);
+}
+#nomore:checked ~ .box {
+  transform: rotateY(0deg);
+}
+#t-more:checked + .box-2 {
+  transform: rotateY(180deg);
+}
+#t-nomore:checked ~ .box-2 {
+  transform: rotateY(0deg);
+}
+#th-more:checked + .box-3 {
+  transform: rotateY(180deg);
+}
+#th-nomore:checked ~ .box-3 {
+  transform: rotateY(0deg);
+}
+input {
+  display: none;
+}
+/* Project Area */
+.project-container {
+  border: 1px solid grey;
+  padding: 0.5rem;
+  margin: 0px auto;
+  height: 80%;
+  width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.project-navbar
+{
+  
+  width: 100%;
+}
+.project-navbar ul 
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  color: white;
+}
+.project-navbar ul li 
+{
+  font-weight: 540;
+  list-style-type: none;
+  text-decoration: none;
+}
+.project-cards
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem;
+  
+  justify-content: space-between;
+  overflow: auto;
+  
+  
+}
+.project-cards .card
+{
+  height: 45%;
+  width: 30%;
+  background-color: transparent;
+  
+  border-radius: 0.9rem;
+}
+.project-cards .card .card-img
+{
+  border-radius: 0.9rem;
+  height: 81%;
+  width: 100%;
+  
+
+}
+.project-cards .card .card-img img
+{
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  
+  height: 100%;
+  width: 100%;
+}
+.project-cards .card-body
+{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.project-cards .card-body .card-title
+{
+  color: white;
+  font-weight: 900;
+}
+.project-cards .card-body .card-lan
+{
+  color: white;
+opacity: 0.6;
+  font-weight: 900;
+}
+/* Contact Area */
+.contact-container {
+  padding: 0.5rem;
+  margin: 0px auto;
+  height: 90%;
+  width: 90%;
+
+  border-radius: 1rem;
+}
+.contact-container .location {
+  height: 50%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.contact-container .location iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-container .contact-form {
+  padding: 1rem;
+  color: white;
+  height: 50%;
+  width: 100%;
+
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-container .contact-form .form-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+.contact-container .contact-form input {
+  width: 100%;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.contact-container .contact-form input::placeholder {
+  font-size: larger;
+  color: white;
+}
+.contact-container .contact-form textarea {
+  
+  width: 100%;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+.contact-container .contact-form textarea::placeholder {
+  color: white;
+  font-size: large;
+}
+.contact-container .contact-form button {
+  align-self: flex-end;
+  background-color: transparent;
+  color: gold;
+  padding: 1rem;
+  font-size: larger;
+  width: fit-content;
+  border-radius: 1rem;
+}
+.contact-container .contact-form button:hover {
+  transition: all 300ms;
+  background-color: black;
+  color: whitesmoke;
+}
+#input-email,
+#input-name {
+  display: initial;
+}
