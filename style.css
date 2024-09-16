@@ -165,11 +165,12 @@ body {
 }
 .main .navbar ul {
   width: 100%;
-  background-color: #493f3f;
+  background-color: #282828;
   color: white;
   font-weight: bold;
   display: flex;
   padding: 1.2rem;
+  
   border-bottom-left-radius: 1.2rem;
   justify-content: space-around;
 }
@@ -324,7 +325,7 @@ input {
 }
 /* Project Area */
 .project-container {
-  border: 1px solid grey;
+  
   padding: 0.5rem;
   margin: 0px auto;
   height: 80%;
@@ -373,11 +374,18 @@ input {
 }
 .project-cards .card .card-img
 {
-  border-radius: 0.9rem;
+  /* border-radius: 0.9rem; */
+  opacity: 0.6;
   height: 81%;
   width: 100%;
   
 
+}
+.project-cards .card .card-img:hover
+{
+  opacity: 1;
+  transition: all 300ms;
+  
 }
 .project-cards .card .card-img img
 {
