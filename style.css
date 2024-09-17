@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "SUSE", sans-serif;
 }
+:root
+{
+  font-size: 12px;
+}
 a {
   text-decoration: none;
   outline: none;
@@ -32,7 +36,7 @@ body {
   background-color: #282828;
 }
 .sidebar .profile {
-  height: 33%;
+  height: 30%;
   width: 100%;
   border-radius: 1rem;
   display: flex;
@@ -46,7 +50,6 @@ body {
 .sidebar .profile .avtar {
   height: 63%;
   width: 72%;
-
   border-radius: 100%;
   padding: 0.5rem;
 }
@@ -54,7 +57,7 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 100%;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 .sidebar .profile .name {
@@ -79,13 +82,55 @@ body {
 
   border-radius: 1rem;
 }
+
+/* @keyframes status 
+{
+  0%
+  {
+    transition: all 300ms;
+    width: 0%;
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 50%;
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 70%;
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 90%;
+  }
+  100%
+  {
+    
+    width: 100%;
+  }
+  
+} */
+
 .sidebar .contact-info {
-  height: 40%;
+  height: 36%;
   border-bottom: 1px solid grey;
   width: 100%;
   color: white;
   border-radius: 1rem;
   padding: 0.5rem;
+  
 }
 .sidebar .contact-info ul {
   width: 100%;
@@ -94,7 +139,7 @@ body {
   align-items: start;
   gap: 1rem;
   flex-direction: column;
-  padding: 1rem;
+  
 }
 .sidebar .contact-info ul li {
   list-style-type: none;
@@ -115,12 +160,12 @@ body {
   font-weight: bold;
 }
 .sidebar .language {
-  height: 35%;
+  height: 42%;
   width: 100%;
   color: white;
   border-bottom: 1px solid grey;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.6rem;
 }
 .language ul {
   height: 100%;
@@ -129,6 +174,7 @@ body {
   grid-template-columns: auto auto auto;
   row-gap: 0.1rem;
   padding: 0.3rem;
+  
 }
 .language ul li {
   display: flex;
@@ -137,7 +183,7 @@ body {
   align-items: center;
   list-style-type: none;
   color: white;
-  font-size: small;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .language ul li:hover {
@@ -146,8 +192,8 @@ body {
 }
 
 .language ul li img {
-  height: 31px;
-  width: 31px;
+  height: 30px;
+  width: 30px;
 }
 
 .main {
@@ -217,7 +263,7 @@ body {
 .c-exp {
   text-align: center;
   padding: 0.3rem;
-  font-size: medium;
+  font-size: 0.9rem;
 }
 .c-post,
 .c-exp {
@@ -268,6 +314,7 @@ body {
   flex-direction: column;
   transform: rotateY(180deg);
   border-radius: 1rem;
+  
 }
 .c-name {
   margin-top: 0.5rem;
@@ -294,6 +341,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 #backbtn,
 #t-backbtn,
@@ -493,3 +541,609 @@ opacity: 0.6;
 #input-name {
   display: initial;
 }
+
+
+.about-container {
+  padding: 0.5rem;
+  margin: 0px auto;
+  height: 90%;
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 1rem;
+}
+.about-container .skills
+{
+  width: 50%;
+  display: flex;
+  justify-content:start;
+  flex-direction: column;
+  align-items: center;
+  
+  padding:0.5rem;
+}
+.about-container h3
+{
+  padding: 0.6rem;
+  text-align: left;
+  color: white;
+}
+.skills .lan
+{
+
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  
+}
+.skills .lan .img
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 10%;
+
+}
+.skills .lan .img img
+{
+  height: 35px;
+  width: 35px;
+
+}
+.skills .lan .range
+{
+  height: 0.5rem;
+  width: 80%;
+  background-color: #282828;
+  border-radius: 1rem;
+  border: 1px solid rgba(222, 237, 198, 0.408);
+  
+}
+.skills .lan .range .i-range
+{
+  height: inherit;
+  border-radius: 1rem;
+  background-color: #ffb606;
+  
+}
+#s-html
+{
+  width: 90%;
+ background-color: orangered;
+  animation: html 6s linear infinite;
+}
+@keyframes html {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+    
+  }
+  
+}
+
+#s-css
+{
+  width: 90%;
+  background-color: rgb(68, 126, 234);
+  animation: css 6s linear infinite;
+}
+@keyframes css {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+    
+  }
+  
+}
+#s-js
+{
+  width: 92%;
+  animation: js 6s linear infinite;
+}
+@keyframes js {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 92%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 92%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 92%;
+    
+    
+  }
+  
+}
+
+#s-wd
+{
+  width: 72%;
+  background-color:rgb(22, 117, 200);
+  animation: js 6s linear infinite;
+}
+@keyframes wd {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 72%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 72%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 72%;
+    
+    
+  }
+  
+}
+#s-tw
+{
+  width: 63%;
+  background-color: aqua;
+  animation: tw 6s linear infinite;
+}
+@keyframes tw {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+    
+  }
+}
+#s-bs
+{
+  background-color: blueviolet;
+  animation: bs 6s linear infinite;
+  width: 90%;
+}
+@keyframes bs {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 90%;
+    
+    
+  }
+}
+#s-java
+{
+  background-color:rgba(5, 103, 152, 0.864);
+  animation: java 6s linear infinite;
+  width: 63%;
+}
+
+@keyframes java {
+  0%
+  {
+    width: 0%;
+
+  }
+  10%
+  {
+    transition: all 300ms;
+    width: 10%;
+    
+  }
+  20%
+  {
+    transition: all 300ms;
+    width: 20%;
+    
+  }
+  30%
+  {
+    transition: all 300ms;
+    width: 30%;
+    
+  }
+  40%
+  {
+    transition: all 300ms;
+    width: 40%;
+
+    
+  }
+  50%
+  {
+    transition: all 300ms;
+    width: 60%;
+    
+  }
+  60%
+  {
+    transition: all 300ms;
+    width: 80%;
+
+    
+  }
+  70%
+  {
+    transition: all 300ms;
+    width: 100%;
+    
+  }
+  80%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+  }
+  90%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+  }
+  100%
+  {
+    transition: all 300ms;
+    width: 63%;
+    
+    
+  }
+}
+
