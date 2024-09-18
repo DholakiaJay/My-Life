@@ -203,6 +203,7 @@ body {
   border-radius: 1rem;
   background-color: #282828;
   display: flex;
+  overflow: auto;
   flex-direction: column;
 }
 .main .navbar {
@@ -406,7 +407,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   padding: 0.3rem;
-  
+  row-gap: 0.6rem;
   justify-content: space-between;
   overflow: auto;
   
@@ -419,6 +420,7 @@ input {
   background-color: transparent;
   
   border-radius: 0.9rem;
+  
 }
 .project-cards .card .card-img
 {
@@ -457,9 +459,13 @@ input {
 }
 .project-cards .card-body .card-lan
 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   color: white;
 opacity: 0.6;
-  font-weight: 900;
+  font-weight: 300;
 }
 /* Contact Area */
 .contact-container {
@@ -548,7 +554,7 @@ opacity: 0.6;
   margin: 0px auto;
   height: 90%;
   width: 90%;
-  border: 1px solid grey;
+  
   border-radius: 1rem;
   overflow: auto;
 }
@@ -1235,6 +1241,7 @@ table, th, td {
   padding: 0.3rem;
   border-radius: 1rem;
   text-align: center;
+  font-weight: 600;
 }
 table th
 {
@@ -1279,3 +1286,63 @@ table th
   width: 36px;
   border-radius: 1rem;
 }
+
+/* Featured-Section */
+
+.featured-section
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+
+}
+.featured-card
+{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+.f-card
+{
+  width: 27%;
+  
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.featured-card img
+{
+  height: 270px;
+  object-fit: cover;
+  width: 100%;
+  
+  border-radius: 0.6rem;
+}
+#ps img
+{
+  background-color: black;
+  object-fit: contain;
+}
+.f-title
+{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  font-size: large;
+  color: whitesmoke;
+}
+.f-title span:nth-child(2)
+{
+  font-size: small;
+  opacity: 0.6;
+}
+
