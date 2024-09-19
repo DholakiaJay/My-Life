@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Thanku Msg</title>
+    <style>
+      body
+      {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+      .thank-container {
+        height: 100%;
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        overflow: hidden;
+      }
+      .output {
+        height: 63%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        color: white;
+        
+        background-color: #141414;
+      }
+      .terminal {
+        height: 37%;
+        width: 96%;
+        color: grey;
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .wrapper {
+        height: 100vh;
+        /*This part is important for centering*/
+        display: grid;
+        place-items: center;
+      }
+
+      .typing-demo {
+        width: 27ch;
+        animation: typing 3s steps(32), blink 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid transparent;
+        font-family: monospace;
+        font-size: 3.6rem;
+        animation-play-state: paused;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      #ani {
+        display: none;
+      }
+      @keyframes blink {
+        50% {
+
+          
+          border-color: whitesmoke;
+        }
+        100%
+        {
+          
+          width: 100%;
+        }
+      }
+      .topbar {
+        width: 100%;
+        background-color: black;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .topbar .t-left,
+      .t-right {
+        width: 50%;
+      }
+      .topbar .t-left ul,
+      .t-right ul {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 3px;
+      }
+      .t-right ul {
+        justify-content: end;
+        margin-right: 12px;
+        color: rgba(245, 245, 245, 0.722);
+      }
+      ul li {
+        font-size: small;
+        list-style-type: none;
+      }
+      .t-left {
+        margin-left: 12px;
+      }
+      .t-left ul li:nth-child(4) {
+        border-bottom: 2px solid rgb(6, 124, 171);
+      }
+      .t-content {
+        opacity: 0.9;
+        font-weight: 270;
+        color: whitesmoke;
+        margin-left: 12px;
+      }
+
+      #code {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: rgba(245, 245, 245, 0.697);
+      }
+
+      .start-ani {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: black;
+        padding: 45px 0px;
+        border: 1px solid black;
+        font-size: 3rem;
+      }
+      #ani:checked + .typing-demo {
+        animation-play-state: running;
+      }
+      #ani-int {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-container">
+      <div class="output">
+        <div class="wrapper">
+          <input type="checkbox" id="ani" />
+          <div class="typing-demo">ThankYou For Watching..
+            <a href="index.html" style="text-decoration: none;"><span style="color: white; font-size:x-large;"><i class="fa-solid fa-house"></i></span></a>
+            <a href="thankuyou.html" style="text-decoration: none;"><span style="color: white; font-size:x-large;"><i class="fa-solid fa-arrow-rotate-right"></i></span></a>
+          
+          </div>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="topbar">
+          <div class="t-left">
+            <ul>
+              <li>PROBLEMS</li>
+              <li>OUTPUT</li>
+              <li>DEBUG CONSOLE</li>
+              <li>TERMINAL</li>
+              <li>PORTS</li>
+              <li>COMMENTS</li>
+            </ul>
+          </div>
+
+          <div class="t-right">
+            <ul>
+              <li><i class="fa-solid fa-tv"></i></li>
+              <li>powershell</li>
+              <li><i class="fa-solid fa-plus"></i></li>
+              <li><i class="fa-solid fa-table-cells-large"></i></li>
+              <li><i class="fa-solid fa-trash-can"></i></li>
+              <li><i class="fa-solid fa-ellipsis"></i></li>
+              <li><i class="fa-solid fa-chevron-up"></i></li>
+              <li><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-content">
+          <span class="tc-location"
+            >PS C:\Users\HP\Desktop\Jay\Projects\My-Life <input type="text" id="code"
+          /></span>
+        </div>
+
+        <label for="ani" id="ani-int"
+          ><div class="start-ani">Start Animation</div></label
+        >
+      </div>
+    </div>
+  </body>
+</html>
