@@ -3,6 +3,29 @@
   margin: 0%;
   box-sizing: border-box;
   font-family: "SUSE", sans-serif;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgb(125, 118, 118);
+  border-radius: 6%; 
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 :root
 {
@@ -16,17 +39,18 @@ a {
 body {
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: #282828;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  
 }
 .sidebar {
   height: 100%;
   width: 21%;
-  border: 1px solid grey;
+  
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -199,7 +223,7 @@ body {
 .main {
   height: 100%;
   width: 71%;
-  border: 1px solid grey;
+  
   border-radius: 1rem;
   background-color: #282828;
   display: flex;
@@ -403,7 +427,7 @@ input {
 }
 .project-navbar ul li 
 {
-  font-weight: 540;
+  font-weight: 450;
   list-style-type: none;
   text-decoration: none;
 }
@@ -1255,7 +1279,9 @@ table th
   opacity: 0.6;
 
 }
-
+.certificate-info table tr td:nth-child(1){
+  opacity: 0.6;
+}
 .about-container .interest
 {
   width: 100%;
@@ -1294,7 +1320,25 @@ table th
   border-radius: 1rem;
 }
 
+
+
+/* Home */
+
+.home-container {
+  padding: 0.5rem;
+  margin: 0px auto;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  overflow: auto;
+  border-radius: 1rem;
+}
 /* Featured-Section */
+
+
 
 .featured-section
 {
