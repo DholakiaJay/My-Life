@@ -1406,3 +1406,27 @@ table th
   opacity: 0.6;
 }
 
+/* @media (min-width: 900px) and (max-width: 900px) {
+    body {
+     
+        font-size: 10px !important;     }
+
+    
+   
+} */
+@media (max-width: 1000px) {
+  body {
+    display: none !important;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .controls label i 
+  {
+    font-size: 0.9rem;
+  }
+  
+  
+}
