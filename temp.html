@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Newa&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #282828;
+      }
+      .container {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 12px;
+        padding: 1rem;
+      }
+      .container .cityname {
+        height: 81%;
+        width: 37%;
+        background-color: #282828;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      .cityname h3 {
+        align-self: flex-start;
+        font-weight: 600;
+        color: whitesmoke;
+      }
+
+      .cityname ul {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: auto;
+      }
+
+      .cityname ul li {
+        list-style-type: none;
+      }
+      .cityname ul li {
+        margin: 3px 0;
+        padding: 6px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.9rem;
+        font-weight: 400;
+      }
+      ul li:hover {
+        background: whitesmoke;
+        color: #282828;
+        transform: scale(1.02);
+      }
+      .container .map {
+        position: relative;
+        height: 81%;
+        width: 63%;
+        overflow: hidden;
+        background-color: #282828;
+        background-image: url("/map.2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+      }
+      .map .map-city {
+        height: 7.2%;
+        width: 6.3%;
+        opacity: 0;
+        transition: all 300ms;
+      }
+      .map-city img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        filter: drop-shadow(3px 0px 6px rgba(255, 255, 255, 0.755));
+      }
+
+      #Ahemdabad {
+        position: absolute;
+        top: 33%;
+        left: 19%;
+      }
+
+      #Baroda {
+        position: absolute;
+        top: 39%;
+        left: 21%;
+      }
+
+      #Delhi {
+        position: absolute;
+        top: 17.1%;
+        left: 31%;
+      }
+      #Delhi img {
+        filter: hue-rotate(225deg);
+      }
+
+      #Gandhinagar {
+        position: absolute;
+        top: 30%;
+        left: 21%;
+      }
+
+      #Hariyana {
+        position: absolute;
+        top: 15%;
+        left: 29%;
+      }
+      #Hariyana img {
+        filter: hue-rotate(225deg);
+      }
+
+      #Jaipur {
+        position: absolute;
+        top: 24%;
+        left: 27%;
+      }
+      #Jaipur img {
+        filter: hue-rotate(90deg);
+      }
+
+      #Kolkata {
+        position: absolute;
+        top: 36%;
+        left: 63%;
+      }
+      #Kolkata img {
+        filter: hue-rotate(270deg);
+      }
+
+      #Rajkot {
+        position: absolute;
+        top: 38%;
+        left: 15%;
+      }
+
+      #Pune {
+        position: absolute;
+        top: 48%;
+        left: 26%;
+      }
+      #Pune img {
+        filter: hue-rotate(315deg);
+      }
+
+      .bounse {
+        animation: myAnim 2.1s ease 0s 1 normal forwards;
+      }
+
+      @keyframes myAnim {
+        0% {
+          animation-timing-function: ease-in;
+          opacity: 1;
+          transform: translateY(-9px);
+        }
+
+        24% {
+          opacity: 1;
+        }
+
+        40% {
+          animation-timing-function: ease-in;
+          transform: translateY(-6px);
+        }
+
+        65% {
+          animation-timing-function: ease-in;
+          transform: translateY(-3px);
+        }
+
+        82% {
+          animation-timing-function: ease-in;
+          transform: translateY(-6px);
+        }
+
+        93% {
+          animation-timing-function: ease-in;
+          transform: translateY(-4px);
+        }
+
+        25%,
+        55%,
+        75%,
+        87% {
+          animation-timing-function: ease-out;
+          transform: translateY(0px);
+        }
+
+        100% {
+          animation-timing-function: ease-out;
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cityname">
+        <h3>Our Branches</h3>
+        <ul>
+          <li onmouseover="bounsCity(this)">
+            Ahemdabad <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Baroda <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Delhi <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Gandhinagar <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Hariyana <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Jaipur <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Kolkata <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Pune <i class="fa-solid fa-map-pin"></i>
+          </li>
+          <li onmouseover="bounsCity(this)">
+            Rajkot <i class="fa-solid fa-map-pin"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="map">
+        <div class="map-city" id="Ahemdabad">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Baroda">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Delhi">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Gandhinagar">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Hariyana">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Jaipur">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Kolkata">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Rajkot">
+          <img src="/location.png" alt="" />
+        </div>
+        <div class="map-city" id="Pune">
+          <img src="/location.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function bounsCity(target) {
+        cityNames = document.querySelectorAll("li");
+        mapCities = document.querySelectorAll(".map-city");
+        cityArr = [cityNames];
+        mapCity = [mapCities];
+
+        console.log(target.innerText);
+        console.log(mapCity[0][0].getAttribute("id"));
+
+        for (i = 0; i < mapCity[0].length; i++) {
+          if (target.innerText == mapCity[0][i].getAttribute("id")) {
+            if (target.innerText == "Ahemdabad") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#f92727;`;
+            } else if (target.innerText == "Baroda") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#f92727;`;
+            } else if (target.innerText == "Gandhinagar") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#f92727;`;
+            } else if (target.innerText == "Rajkot") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#f92727;`;
+            } else if (target.innerText == "Delhi") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#1d8ffa;`;
+            } else if (target.innerText == "Hariyana") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#1d8ffa;`;
+            } else if (target.innerText == "Jaipur") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#65af07;`;
+            } else if (target.innerText == "Kolkata") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#be54fc;`;
+            } else if (target.innerText == "Pune") {
+              target.children[0].style.cssText = `transform:scale(1.2); color:#f333f3;`;
+            }
+
+            mapCity[0][i].style.cssText = `opacity:1;`;
+            mapCity[0][i].classList.add("bounse");
+          } else {
+            console.log("errror");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
